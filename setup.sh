@@ -1,4 +1,4 @@
-#bin/bash
+#/bin/bash
 
 if [ $# -ne '1' ]
 	then
@@ -23,6 +23,8 @@ if [ $1 = "classic" ]
 then
 	sudo snap install code --classic
 	sudo snap install teams-insider spotify
+	sudo apt -y install bc module-assistant dkms
+	sudo m-a prepare
 	cd ~
 	git clone https://github.com/tomaspinho/rtl8821ce.git
 	cd rtl8821ce
@@ -30,5 +32,6 @@ then
 elif [ $1 = "wsl" ]
 then
 	printf "Install VSCode from here: https://code.visualstudio.com/\n"
+	echo "End user can install whatever he/she wants!"
 fi
 echo "------------------------ ENDING PROCEDURE ------------------------"
