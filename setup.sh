@@ -14,17 +14,21 @@ then
 	then
 	printf "Full Desktop"
 fi
-echo " Ubuntu Setup for UTh"
+printf " Ubuntu Setup for UTh"
 echo "------------------------ STARTING PROCEDURE ------------------------"
 sudo apt update
 sudo apt -y upgrade
-sudo apt install build-essential gdb valgrind gcc
+sudo apt -y install build-essential gdb valgrind gcc
 if [ $1 = "classic" ]
 then
 	sudo snap install code --classic
 	sudo snap install teams-insider spotify
-	elif [ $1 = "wsl" ]
-	then
+	cd ~
+	git clone https://github.com/tomaspinho/rtl8821ce.git
+	cd rtl8821ce
+	sudo ./dkms-install
+elif [ $1 = "wsl" ]
+then
 	printf "Install VSCode from here: https://code.visualstudio.com/\n"
 fi
 echo "------------------------ ENDING PROCEDURE ------------------------"
