@@ -14,7 +14,7 @@ then
 	then
 	printf "Full Desktop"
 fi
-printf " Ubuntu Setup for UTh"
+printf " Ubuntu Setup for UTh\n"
 echo "------------------------ STARTING PROCEDURE ------------------------"
 sudo apt update
 sudo apt -y upgrade
