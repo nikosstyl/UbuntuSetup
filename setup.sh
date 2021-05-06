@@ -36,4 +36,5 @@ elif [ $1 = "wsl" ]
 then
 	printf "Install VSCode from here: https://code.visualstudio.com/\n"
 fi
+rm -rf ~/UbuntuSetup
 echo "------------------------ ENDING PROCEDURE ------------------------"
